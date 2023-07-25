@@ -5,13 +5,15 @@ import NoticeCards from "./Components/NoticeCards/NoticeCards";
 import VideoPlay from "./Components/VideoPlay/VideoPlay";
 import StudentList from "./Components/StudentList/StudentList";
 import Login from "./Login/Login";
+import TextEditor from "./Components/TextEditor/TextEditor";
 
 
 function App() {
   return (
     <div id="layout-wrapper">
       <Header />
-      <StudentList/>
+      <TextEditor/>
+      {/* <StudentList/> */}
       {/* <NoticeCards/> */}
       {/* <EnrollCourse/> */}
       {/* <Login/> */}
