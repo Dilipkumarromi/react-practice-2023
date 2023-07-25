@@ -3,15 +3,18 @@ import EnrollCourse from "./Components/EnrollCourse/EnrollCourse";
 import Header from "./Components/Header/Header";
 import NoticeCards from "./Components/NoticeCards/NoticeCards";
 import VideoPlay from "./Components/VideoPlay/VideoPlay";
+import StudentList from "./Components/StudentList/StudentList";
+import Login from "./Login/Login";
 
 
 function App() {
   return (
     <div id="layout-wrapper">
-      {/* <Header /> */}
+      <Header />
+      {/* <StudentList/> */}
       {/* <NoticeCards/> */}
       {/* <EnrollCourse/> */}
-      <VideoPlay/>
+      <Login/>
     </div>
   );
 }
