@@ -11,10 +11,10 @@ function App() {
   return (
     <div id="layout-wrapper">
       <Header />
-      {/* <StudentList/> */}
+      <StudentList/>
       {/* <NoticeCards/> */}
       {/* <EnrollCourse/> */}
-      <Login/>
+      {/* <Login/> */}
     </div>
   );
 }
