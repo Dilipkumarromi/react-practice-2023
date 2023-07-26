@@ -3,7 +3,7 @@ import JoditEditor from "jodit-react";
 import './TextEditor.css'
 export default function TextEditor({ placeholder }) {
   const editor = useRef(null);
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("cccc");
 
   //   const config = useMemo(
   //     {
@@ -21,9 +21,9 @@ export default function TextEditor({ placeholder }) {
               <div class="col-lg-12">
                 <div class="justify-content-between d-flex align-items-center mb-3"></div>
 
-                <div class="card">
-                  <div class="card-header">
-                    <h4 class="card-title mb-0">Bubble Editor</h4>
+                <div class="card ">
+                  <div class="card-header cards_heading_color">
+                    <h4 class="card-title mb-0" style={{color:'white'}}>Bubble Editor</h4>
                   </div>
 
                   <div class="card-body">
@@ -49,7 +49,7 @@ export default function TextEditor({ placeholder }) {
                         
                       />
                     </div>
-                     
+                     {content}
                     <div>
                       <div class="input-group" >
                         <button

@@ -1,11 +1,10 @@
 import React,{createContext } from "react";
-import ApiServeces from "../util/ApiServices";
+import {useNavigate} from 'react-router-dom'
 import "./Login.css";
 import AuthUserAccess from "../util/ApiServices";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-export default function Login() {
-  const isLogin=localStorage.getItem('isLogin');
-  
+ export  default function Login() {
+   
   return (
     <div className="auth-page-wrapper pt-5">
       <div className="auth-one-bg-position auth-one-bg" id="auth-particles">
@@ -47,10 +46,9 @@ export default function Login() {
                         return errors;
                       }}
                       onSubmit={(values, { setSubmitting }) => {
-                        setTimeout(async() => {
-                           
-                          await AuthUserAccess.Login(values)
-                           
+                        setTimeout(async() => {                           
+                          AuthUserAccess.Login(values)    
+                          // navigation("/About")
                           // console.log('Auth',JSON.stringify(values, null, 2))
                           setSubmitting(false);
                         }, 400);
