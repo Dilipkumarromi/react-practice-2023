@@ -5,13 +5,15 @@ import StudentList from '../StudentList/StudentList'
 import TextEditor from '../TextEditor/TextEditor'
 import Router from '../../Router/Router'
 import CourseCard from '../Student/CourseCard/CourseCard'
+import UserProfile from '../Student/UserProfile/UserProfile'
+import DegreeList from '../DegreeList/DegreeList'
 
 
 export default function Home() {
   return (
      <>
      <Header/>
-    <CourseCard/>
+    <DegreeList/>
      
      </>
   )

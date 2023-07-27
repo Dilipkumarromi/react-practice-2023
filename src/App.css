@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.cards_heading_color{
+   
+  background: linear-gradient(to right, #000046, #1cb5e0);
+}
