@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -1074,11 +1075,9 @@ export default function Header() {
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                   <h6 class="dropdown-header">Welcome Anna!</h6>
-                  <a class="dropdown-item" href="pages-profile.html">
-                    <i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>{" "}
-                    <span class="align-middle">Profile</span>
-                  </a>
-                  <a class="dropdown-item" href="apps-chat.html">
+                  <Link to="/student-profile" class="dropdown-item"> <i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>{" "}<span class="align-middle">Profile</span></Link>
+                  
+                  {/* <a class="dropdown-item" href="apps-chat.html">
                     <i class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>{" "}
                     <span class="align-middle">Messages</span>
                   </a>
@@ -1089,15 +1088,15 @@ export default function Header() {
                   <a class="dropdown-item" href="pages-faqs.html">
                     <i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i>{" "}
                     <span class="align-middle">Help</span>
-                  </a>
+                  </a> */}
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="pages-profile.html">
                     <i class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i>{" "}
                     <span class="align-middle">
-                      Balance : <b>$5971.67</b>
+                     Due Balance : <b>$5971.67</b>
                     </span>
                   </a>
-                  <a class="dropdown-item" href="pages-profile-settings.html">
+                  {/* <a class="dropdown-item" href="pages-profile-settings.html">
                     <span class="badge bg-soft-success text-success mt-1 float-end">
                       New
                     </span>
@@ -1107,7 +1106,7 @@ export default function Header() {
                   <a class="dropdown-item" href="auth-lockscreen-basic.html">
                     <i class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i>{" "}
                     <span class="align-middle">Lock screen</span>
-                  </a>
+                  </a> */}
                   <a class="dropdown-item" href="auth-logout-basic.html">
                     <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>{" "}
                     <span class="align-middle" data-key="t-logout">
@@ -1170,27 +1169,21 @@ export default function Header() {
                 </a>
                 <div class="collapse menu-dropdown" id="sidebarDashboards">
                   <ul class="nav nav-sm flex-column">
-                    <li class="nav-item">
-                      <a
-                        href="dashboard-analytics.html"
-                        class="nav-link"
-                        data-key="t-analytics"
-                      >
-                        {" "}
-                        Analytics-0
-                      </a>
+                    <li class="nav-item">   
+                      <Link to="/studentlist" data-key="t-analytics" class="nav-link">Student List</Link>
                     </li>
                     <li class="nav-item">
-                      <a
-                        href="dashboard-crm.html"
-                        class="nav-link"
-                        data-key="t-crm"
-                      >
-                        {" "}
-                        CRM{" "}
-                      </a>
+                      <Link to="/texteditor" class="nav-link" data-key="t-crm">Texteditor</Link>
                     </li>
                     <li class="nav-item">
+                      <Link to="/certificate" class="nav-link" data-key="t-crm">Certificate List</Link>
+                    </li>
+                    <li class="nav-item">
+                      <Link to="/course-enrollment" class="nav-link" data-key="t-crm">My Course</Link>
+                    </li>
+                    
+
+                    {/* <li class="nav-item">
                       <a href="/#" class="nav-link" data-key="t-ecommerce">
                         {" "}
                         Ecommerce{" "}
@@ -1215,12 +1208,12 @@ export default function Header() {
                         {" "}
                         Projects{" "}
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </li>
 
-              <li class="nav-item">
+              {/* <li class="nav-item">
                 <a
                   class="nav-link menu-link"
                   href="#sidebarPages"
@@ -1373,9 +1366,9 @@ export default function Header() {
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li> */}
 
-              <li class="nav-item">
+              {/* <li class="nav-item">
                 <a
                   class="nav-link menu-link"
                   href="#sidebarMultilevel"
@@ -1463,13 +1456,12 @@ export default function Header() {
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
       </div>
-
-      <div class="main-content"></div>
+ 
     </>
   );
 }

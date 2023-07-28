@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./StudentList.css";
 import ApiServices from "../../util/ApiServices";
+import NoticeCards from "../NoticeCards/NoticeCards";
 export default function StudentList() {
   const [info, setInfo] = useState([]);
   const studentInfo = async () => {
@@ -18,9 +19,11 @@ export default function StudentList() {
   // info.map((item)=>{console.log('item',item)})
 
   return (
+   
     <div className="main-content">
       <div className="page-content">
         <div className="container-fluid">
+        <NoticeCards/>
           <div className="row">
             <div className="col-xl-12">
               <div className="card">

@@ -30,109 +30,70 @@ export default function VideoPlay() {
                 width="100%"
                 pip={true}
               />
-               
             </div>
-            <p >Video Title</p>
-             
+            <p>Video Title</p>
           </div>
 
-          <div className="col-md-3 mt-2" data-bs-spy="scroll">
-            {/* <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
+          <div className="col-md-3 mt-2">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title mb-0">Primary Track</h4>
+              </div>
+              
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      How do I set up my profile ?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample"
                   >
-                    How do I set up my profile ?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    <ul>
-                      <li>
+                    <div class="accordion-body">
+                      <ul>
+                        <li></li>
+                        <li>Basic</li>
+                        <li>Basic</li>
+                        <li>Basic</li>
+                        <li>Basic</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                      </li>
-                      <li>Basic</li>
-                      <li>Basic</li>
-                      <li>Basic</li>
-                      <li>Basic</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo"
+              <div class="card-body">
+                <div class="mx-n3">
+                  <div
+                    data-simplebar
+                    data-simplebar-auto-hide="false"
+                    data-simplebar-track="primary"
+                    style={{ maxHeight: "275px" }}
                   >
-                    What can I do with my project ?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingTwo"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    If you had signed up on a free account with Slicktext, then
-                    upgraded to a paid plan at a later date, your bill will
-                    renew based on the date you had upgraded to a paid plan. All
-                    invoices are able to be viewed under your plan options in
-                    your SlickText account.
+                    <div class="text-center my-2">
+                      <a href="javascript:void(0);" class="text-success">
+                        <i class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i>{" "}
+                        Load more{" "}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                  >
-                    Where can I go to edit voice settings
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseThree"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingThree"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    No, we cannot provide this information. Opting out from a
-                    list is an anonymous, private act. This prevents further
-                    harassment. Providing this information is considered bad
-                    practice, and further communication after they opt out would
-                    be considered against compliance.
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            <section class="video-playlist">
-              <h3 class="title">Title of Video Playlist</h3>
-              <p>10 lessions &nbsp; . &nbsp; 50m 48s</p>
-              <div class="videos"></div>
-            </section>
+            </div>
           </div>
+
+          <div class="col-xl-4 col-lg-6"></div>
         </div>
       </div>
     </>
