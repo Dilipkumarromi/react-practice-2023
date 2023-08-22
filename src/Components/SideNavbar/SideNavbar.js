@@ -23,6 +23,7 @@ export default function SideNavbar() {
                 <i class="ri-dashboard-2-line"></i>{" "}
                 <span data-key="t-dashboards">Dashboards</span>
               </a>
+              
               <div class="collapse menu-dropdown" id="sidebarDashboards">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
@@ -70,6 +71,7 @@ export default function SideNavbar() {
                   </li>
                 </ul>
               </div>
+
             </li>
             <li class="nav-item">
               <a

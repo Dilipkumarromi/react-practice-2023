@@ -3,44 +3,12 @@ import JoditEditor from "jodit-react";
 import "./TextEditor.css";
 import Swal from "sweetalert2";
 import ApiServices from "../../util/ApiServices";
-export default function TextEditor({ placeholder }) {
-  const editor = useRef(null);
-  const [content, setContent] = useState("cccc");
-  const [courseList, setCourseList] = useState([]);
-  const [drp, setDropDown] = useState("");
-  const getCourse = async () => {
-    const course = await ApiServices.getCourseList();
-    setCourseList(course);
-  };
-  const onHandle = (e) => {
-    console.log("eSelect", e?.target.value);
-    setDropDown(e.target.value);
-  };
-  const saveCourseDetails = async () => {
-    const body = {
-      course_master_id: +drp,
-      body: content,
-      is_active: 1,
-    };
 
-    const createCourseDetails = await ApiServices.courseDetails(body);
-
-    if (createCourseDetails?.status === 409) {
-      return Swal.fire("Dulicate entries are not allowed!", "", "question");
-    }
-    return Swal.fire("Course Details has been created", "", "success");
-  };
-  useEffect(() => {
-    getCourse();
-  }, []);
-
-  //   const config = useMemo(
-  //     {
-  //       readonly: false, // all options from https://xdsoft.net/jodit/docs/,
-  //       placeholder: placeholder || "Start typings...",
-  //     },
-  //     [placeholder]
-  //   );
+export default function Blogs() {
+    const editor = useRef(null);
+    const [content, setContent] = useState("cccc");
+    const [courseList, setCourseList] = useState([]);
+    const [drp, setDropDown] = useState("");
   return (
     <>
       <div class="main-content">
@@ -63,14 +31,14 @@ export default function TextEditor({ placeholder }) {
                       <select
                         class="form-select mb-3"
                         aria-label="Default select example"
-                        onChange={onHandle}
+                         
                       >
                         <option> Select User</option>
-                        {courseList.map((data) => (
+                        {/* {courseList.map((data) => (
                           <option value={data?.id} key={data?.id}>
                             {data?.title}
                           </option>
-                        ))}
+                        ))} */}
                       </select>
                     </div>
                     <div class="bubble-editor">
@@ -89,7 +57,7 @@ export default function TextEditor({ placeholder }) {
                           class="btn btn-outline-primary float-left mt-2"
                           type="button"
                           id="button-addon1"
-                          onClick={saveCourseDetails}
+                         
                         >
                           Save
                         </button>
@@ -103,5 +71,5 @@ export default function TextEditor({ placeholder }) {
         </div>
       </div>
     </>
-  );
+  )
 }

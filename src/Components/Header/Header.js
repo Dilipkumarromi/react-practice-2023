@@ -1181,6 +1181,61 @@ export default function Header() {
                     <li class="nav-item">
                       <Link to="/course-enrollment" class="nav-link" data-key="t-crm">My Course</Link>
                     </li>
+                    <li class="nav-item">
+                      <Link to="/student-forms" class="nav-link" data-key="t-crm">Student Forms</Link>
+                    </li>
+                    
+
+                    {/* <li class="nav-item">
+                      <a href="/#" class="nav-link" data-key="t-ecommerce">
+                        {" "}
+                        Ecommerce{" "}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="dashboard-crypto.html"
+                        class="nav-link"
+                        data-key="t-crypto"
+                      >
+                        {" "}
+                        Crypto{" "}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="dashboard-projects.html"
+                        class="nav-link"
+                        data-key="t-projects"
+                      >
+                        {" "}
+                        Projects{" "}
+                      </a>
+                    </li> */}
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarDashboardsBlogs"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarDashboardsBlogs"
+                >
+                  <i class="ri-dashboard-2-line"></i>{" "}
+                  <span data-key="t-dashboards">Blogs</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarDashboardsBlogs">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">   
+                      <Link to="/blogs" data-key="t-analytics" class="nav-link">Blogs list</Link>
+                    </li>
+                    <li class="nav-item">   
+                      <Link to="/blogs" data-key="t-analytics" class="nav-link">Create Blogs</Link>
+                    </li>
+                     
                     
 
                     {/* <li class="nav-item">

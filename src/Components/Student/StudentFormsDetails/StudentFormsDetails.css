@@ -1,0 +1,13 @@
+.forms_Header{
+    height: 150px;
+    background-color: #2F3194;
+    color: white;
+    border: 1px solid black;
+}
+.student_Details{
+   margin: 20px;
+   font-size: 14px;
+}
+.student_dob{
+    margin-right: 15px;
+}

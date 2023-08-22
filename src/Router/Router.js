@@ -11,6 +11,8 @@ import Header from '../Components/Header/Header'
 import DegreeList from '../Components/DegreeList/DegreeList'
 import EnrollCourse from '../Components/Student/EnrollCourse/EnrollCourse'
 import UserProfile from '../Components/Student/UserProfile/UserProfile'
+import StudentFormsDetails from '../Components/Student/StudentFormsDetails/StudentFormsDetails'
+import Blogs from '../Components/Blogs/Blogs'
 
 export default function Router() {
   return (
@@ -23,9 +25,11 @@ export default function Router() {
       <Route path="/texteditor" element={<TextEditor/>}/>
       <Route path="/videoplayer" element={<VideoPlay/>}/>
       <Route path="/studentlist" element={<StudentList/>}/>
+      <Route path="/student-forms" element={<StudentFormsDetails/>}/>
       <Route path="/certificate" element={<DegreeList/>}/>
       <Route path="/course-enrollment" element={<EnrollCourse/>}/>
       <Route path="/student-profile" element={<UserProfile/>}/>
+      <Route path="/blogs" element={<Blogs/>}/>
       <Route path="/*" element={<Auth404/>}/>
 
      </Routes>
