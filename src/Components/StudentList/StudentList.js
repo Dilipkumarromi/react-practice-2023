@@ -232,16 +232,10 @@ export default function StudentList() {
         aria-hidden="true"
         style={{ display: "none" }}
       >
-        <div class="modal-dialog modal-fullscreen-xxl-down">
-          <div class="modal-content col-md-12">
-            <div class="modal-header">
-               
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+        <div class="modal-dialog modal-fullscreen-xxl-down col-md-10">
+          <div class="modal-content col-md-10">
+            <div class="modal-header">              
+              
             </div>
             
             <div class="modal-body">
@@ -289,7 +283,7 @@ export default function StudentList() {
           </div>
 
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 " style={{borderRadius:'5px'}}>
               <div>
                 <div class="d-flex">
                   <ul
@@ -353,8 +347,8 @@ export default function StudentList() {
                     <div class="row">
                       <div class="col-xxl-3">
                         <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title mb-5">
+                          <div class="card-body profile-header-bg">
+                            <h5 class="card-title mb-5" style={{color:'white'}}>
                               Complete Your Profile
                             </h5>
                             <div class="progress animated-progress custom-progress progress-label">
@@ -2077,14 +2071,12 @@ export default function StudentList() {
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-light"
+                class="btn btn-warning"
                 data-bs-dismiss="modal"
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary ">
-                Save Changes
-              </button>
+              
             </div>
           </div>
         </div>

@@ -1,4 +1,9 @@
-.cards_heading_color{
-   
-    background: linear-gradient(to right, #000046, #1cb5e0);
+.cards_heading_color {
+  background: linear-gradient(to right, #000046, #1cb5e0);
+}
+.profile-header-bg{
+    border-radius: 7px;
+    color: white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+
 }
