@@ -13,6 +13,7 @@ import EnrollCourse from "../Components/Student/EnrollCourse/EnrollCourse";
 import UserProfile from "../Components/Student/UserProfile/UserProfile";
 import StudentFormsDetails from "../Components/Student/StudentFormsDetails/StudentFormsDetails";
 import Blogs from "../Components/Blogs/Blogs";
+import CourseAdd from "../Components/CourseAdd/CourseAdd";
 
 export default function Router() {
   return (
@@ -29,6 +30,7 @@ export default function Router() {
           <Route path="/student-forms" element={<StudentFormsDetails />} />
           <Route path="/certificate" element={<DegreeList />} />
           <Route path="/course-enrollment" element={<EnrollCourse />} />
+          <Route path="/add-course" element={<CourseAdd />} />
           <Route path="/student-profile" element={<UserProfile />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/*" element={<Auth404 />} />

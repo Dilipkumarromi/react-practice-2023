@@ -1184,6 +1184,9 @@ export default function Header() {
                     <li class="nav-item">
                       <Link to="/student-forms" class="nav-link" data-key="t-crm">Student Forms</Link>
                     </li>
+                    <li class="nav-item">
+                      <Link to="/add-course" class="nav-link" data-key="t-crm">Add Course</Link>
+                    </li>
                     
 
                     {/* <li class="nav-item">

@@ -3,56 +3,56 @@ import React from "react";
 export default function EnrollCourse() {
   return (
     <>
-    <div class="main-content">
-        <div class="page-content">
-          <div class="container-fluid"> 
+    <div className="main-content">
+        <div className="page-content">
+          <div className="container-fluid"> 
      
 
-      <div class="row">
-        <div class="col-xl-4">
-          <div class="card">
-            <div class="card-body p-0">
+      <div className="row">
+        <div className="col-xl-4">
+          <div className="card">
+            <div className="card-body p-0">
               <div
-                class="alert alert-warning border-0 rounded-top rounded-0 m-0 d-flex align-items-center"
+                className="alert alert-danger border-0 rounded-top rounded-0 m-0 d-flex align-items-center"
                 role="alert"
               >
                 <i
                   data-feather="alert-triangle"
-                  class="text-warning me-2 icon-sm"
+                  className="text-warning me-2 icon-sm"
                 ></i>
-                <div class="flex-grow-1 text-truncate">
-                  Your free trial expired in <b>17</b> days.
+                <div className="flex-grow-1 text-truncate danger">
+                  Your course expired in <b>19</b> days.
                 </div>
-                <div class="flex-shrink-0">
+                <div className="flex-shrink-0">
                   <a
                     href="pages-pricing.html"
-                    class="text-reset text-decoration-underline"
+                    className="text-reset text-decoration-underline"
                   >
                     <b>Upgrade</b>
                   </a>
                 </div>
               </div>
 
-              <div class="row align-items-end">
-                <div class="col-sm-8">
-                  <div class="p-3">
-                    <p class="fs-16 lh-base">
+              <div className="row align-items-end">
+                <div className="col-sm-8">
+                  <div className="p-3">
+                    <p className="fs-16 lh-base">
                       Upgrade your plan from a{" "}
-                      <span class="fw-semibold">Free trial</span>, to ‘Premium
-                      Plan’ <i class="mdi mdi-arrow-right"></i>
+                      <span className="fw-semibold">Free trial</span>, to ‘Premium
+                      Plan’ <i className="mdi mdi-arrow-right"></i>
                     </p>
-                    <div class="mt-3">
-                      <a href="pages-pricing.html" class="btn btn-success">
+                    <div className="mt-3">
+                      <a href="pages-pricing.html" className="btn btn-success">
                         Upgrade Account!
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <div class="px-3">
+                <div className="col-sm-4">
+                  <div className="px-3">
                     <img
                       src="assets/images/user-illustarator-2.png"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt=""
                     />
                   </div>
@@ -61,50 +61,50 @@ export default function EnrollCourse() {
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
-          <div class="card">
-            <div class="card-body p-0">
+        <div className="col-xl-4">
+          <div className="card">
+            <div className="card-body p-0">
               <div
-                class="alert alert-warning border-0 rounded-top rounded-0 m-0 d-flex align-items-center"
+                className="alert alert-warning border-0 rounded-top rounded-0 m-0 d-flex align-items-center"
                 role="alert"
               >
                 <i
                   data-feather="alert-triangle"
-                  class="text-warning me-2 icon-sm"
+                  className="text-warning me-2 icon-sm"
                 ></i>
-                <div class="flex-grow-1 text-truncate">
+                <div className="flex-grow-1 text-truncate danger">
                   Your free trial expired in <b>17</b> days.
                 </div>
-                <div class="flex-shrink-0">
+                <div className="flex-shrink-0">
                   <a
                     href="pages-pricing.html"
-                    class="text-reset text-decoration-underline"
+                    className="text-reset text-decoration-underline"
                   >
                     <b>Upgrade</b>
                   </a>
                 </div>
               </div>
 
-              <div class="row align-items-end">
-                <div class="col-sm-8">
-                  <div class="p-3">
-                    <p class="fs-16 lh-base">
+              <div className="row align-items-end">
+                <div className="col-sm-8">
+                  <div className="p-3">
+                    <p className="fs-16 lh-base">
                       Upgrade your plan from a{" "}
-                      <span class="fw-semibold">Free trial</span>, to ‘Premium
-                      Plan’ <i class="mdi mdi-arrow-right"></i>
+                      <span className="fw-semibold">Free trial</span>, to ‘Premium
+                      Plan’ <i className="mdi mdi-arrow-right"></i>
                     </p>
-                    <div class="mt-3">
-                      <a href="pages-pricing.html" class="btn btn-success">
+                    <div className="mt-3">
+                      <a href="pages-pricing.html" className="btn btn-success">
                         Upgrade Account!
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <div class="px-3">
+                <div className="col-sm-4">
+                  <div className="px-3">
                     <img
                       src="assets/images/user-illustarator-2.png"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt=""
                     />
                   </div>
@@ -113,50 +113,50 @@ export default function EnrollCourse() {
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
-          <div class="card">
-            <div class="card-body p-0">
+        <div className="col-xl-4">
+          <div className="card">
+            <div className="card-body p-0">
               <div
-                class="alert alert-warning border-0 rounded-top rounded-0 m-0 d-flex align-items-center"
+                className="alert alert-warning border-0 rounded-top rounded-0 m-0 d-flex align-items-center"
                 role="alert"
               >
                 <i
                   data-feather="alert-triangle"
-                  class="text-warning me-2 icon-sm"
+                  className="text-warning me-2 icon-sm"
                 ></i>
-                <div class="flex-grow-1 text-truncate">
+                <div className="flex-grow-1 text-truncate">
                   Your free trial expired in <b>17</b> days.
                 </div>
-                <div class="flex-shrink-0">
+                <div className="flex-shrink-0">
                   <a
                     href="pages-pricing.html"
-                    class="text-reset text-decoration-underline"
+                    className="text-reset text-decoration-underline"
                   >
                     <b>Upgrade</b>
                   </a>
                 </div>
               </div>
 
-              <div class="row align-items-end">
-                <div class="col-sm-8">
-                  <div class="p-3">
-                    <p class="fs-16 lh-base">
+              <div className="row align-items-end">
+                <div className="col-sm-8">
+                  <div className="p-3">
+                    <p className="fs-16 lh-base">
                       Upgrade your plan from a{" "}
-                      <span class="fw-semibold">Free trial</span>, to ‘Premium
-                      Plan’ <i class="mdi mdi-arrow-right"></i>
+                      <span className="fw-semibold">Free trial</span>, to ‘Premium
+                      Plan’ <i className="mdi mdi-arrow-right"></i>
                     </p>
-                    <div class="mt-3">
-                      <a href="pages-pricing.html" class="btn btn-success">
+                    <div className="mt-3">
+                      <a href="pages-pricing.html" className="btn btn-success">
                         Upgrade Account!
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <div class="px-3">
+                <div className="col-sm-4">
+                  <div className="px-3">
                     <img
                       src="assets/images/user-illustarator-2.png"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt=""
                     />
                   </div>

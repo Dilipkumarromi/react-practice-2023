@@ -20,7 +20,7 @@ const getStudentInfo=async(centre_id)=>{
     return data
 }
 const updateStudent=async(data)=>{
-  const student=await axios.get(`${BASE_URL}/update-student-enrollment`,data)
+  const student=await axios.patch(`${BASE_URL}/update-student-enrollment`,data)
   return student
 }
 const getCourseList=async()=>{
