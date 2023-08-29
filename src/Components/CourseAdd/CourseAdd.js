@@ -1,15 +1,31 @@
-import React from "react";
-import { Field, Form, Formik, FormikProps,useFormik } from 'formik';
+import React, { useState } from "react";
+import {
+  Field,
+  Form,
+  Formik,
+  FormikProps,
+  useFormik,
+  FormikProvider,
+} from "formik";
 
 export default function CourseAdd() {
+  const [activeCourse, setActiveCourse] = useState("");
+  const selectDropDown = (e) => {
+    setActiveCourse(e.target.value);
+  };
+
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      jobType: "",
+      title: "",
+      sub_title: "",
+      duration: "",
+      fee: "",
+      files: "",
+      is_active: activeCourse,
     },
+
     onSubmit: (values) => {
+      console.log("onSubmit", values);
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -32,60 +48,130 @@ export default function CourseAdd() {
                   </div>
                   <div className="card-body">
                     <div className="live-preview">
-                      <form onSubmit={formik.handleSubmit}>
-                        <div className="row">
-                          <div className="col-md-6">
-                            <div className="mb-3">
-                              <label htmlFor="firstName" className="form-label">
-                                First Name
-                              </label>
-                              <input
-                                id="firstName"
-                                name="firstName"
-                                type="text"
-                                onChange={formik.handleChange}
-                                value={formik.values.firstName}
-                                className="form-control"
-                              />
+                      <FormikProvider value={formik}>
+                        <form onSubmit={formik.handleSubmit}>
+                          <div className="row">
+                            <div className="col-md-6">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="firstName"
+                                  className="form-label"
+                                >
+                                  Title
+                                </label>
+                                <Field
+                                  id="firstName"
+                                  name="title"
+                                  type="text"
+                                  onChange={formik.handleChange}
+                                  value={formik.values.firstName}
+                                  className="form-control"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-md-6">
-                            <div className="mb-3">
-                              <label htmlFor="firstName" className="form-label">
-                                Last Name
-                              </label>
-                              <input
-                                id="firstName"
-                                name="firstName"
-                                type="text"
-                                onChange={formik.handleChange}
-                                value={formik.values.lastName}
-                                className="form-control"
-                              />
+                            <div className="col-md-6">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="firstName"
+                                  className="form-label"
+                                >
+                                  Sub Title
+                                </label>
+                                <Field
+                                  id="firstName"
+                                  name="sub_title"
+                                  type="text"
+                                  onChange={formik.handleChange}
+                                  value={formik.values.lastName}
+                                  className="form-control"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-md-6">
-                            <div className="mb-3">
-                              <label htmlFor="firstName" className="form-label">
-                                Active
-                              </label>
-                              <Field as="select" name="color">
-                                <option value="red">Red</option>
-                                <option value="green">Green</option>
-                                <option value="blue">Blue</option>
-                              </Field>
+                            <div className="col-md-6">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="firstName"
+                                  className="form-label"
+                                >
+                                  Duration
+                                </label>
+                                <Field
+                                  id="firstName"
+                                  name="duration"
+                                  type="text"
+                                  onChange={formik.handleChange}
+                                  value={formik.values.lastName}
+                                  className="form-control"
+                                />
+                              </div>
                             </div>
-                          </div>
+                            <div className="col-md-6">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="firstName"
+                                  className="form-label"
+                                >
+                                  Fee
+                                </label>
+                                <Field
+                                  id="firstName"
+                                  name="fee"
+                                  type="text"
+                                  onChange={formik.handleChange}
+                                  value={formik.values.lastName}
+                                  className="form-control"
+                                />
+                              </div>
+                            </div>
+                            <div className="col-md-6">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="firstName"
+                                  className="form-label"
+                                >
+                                  Upload Course Photo
+                                </label>
+                                <Field
+                                  type="file"
+                                  name="files"
+                                  className="form-control"
+                                  accept="image/jpeg"
+                                />
+                              </div>
+                            </div>
+                            <div className="col-md-6">
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="firstName"
+                                  className="form-label"
+                                >
+                                  Active
+                                </label>
 
-                          <div className="col-lg-12">
-                            <div className="text-end">
-                              <button type="submit" className="btn btn-primary">
-                                Submit
-                              </button>
+                                <Field
+                                  as="select"
+                                  name="is_active"
+                                  className="form-control"
+                                >
+                                  <option value="true">Active</option>
+                                  <option value="false">De-Active</option>
+                                </Field>
+                              </div>
+                            </div>
+
+                            <div className="col-lg-12">
+                              <div className="text-end">
+                                <button
+                                  type="submit"
+                                  className="btn btn-primary"
+                                >
+                                  Submit
+                                </button>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </form>
+                        </form>
+                      </FormikProvider>
                     </div>
                   </div>
                 </div>
