@@ -3,18 +3,28 @@ import JoditEditor from "jodit-react";
 import "./TextEditor.css";
 import Swal from "sweetalert2";
 import ApiServices from "../../util/ApiServices";
+let redStore
 export default function TextEditor({ placeholder }) {
   const editor = useRef(null);
-  const [content, setContent] = useState("cccc");
+  const [content, setContent] = useState('');
   const [courseList, setCourseList] = useState([]);
   const [drp, setDropDown] = useState("");
   const getCourse = async () => {
-    const course = await ApiServices.getCourseList();
-    setCourseList(course);
+    const course = await ApiServices.getCourseList(); 
+    
+    setCourseList( course);
   };
-  const onHandle = (e) => {
-    console.log("eSelect", e?.target.value);
+
+  const courseDetailsBody=async(course_id)=>{
+    const getCourseBody=await ApiServices.getCourseListDetailsBody(course_id);  
+    if(getCourseBody.status===204) {
+      setContent('enter html content');
+    }
+    setContent(getCourseBody?.data?.body)
+  }
+  const onHandle = (e) => {   
     setDropDown(e.target.value);
+    courseDetailsBody(e.target.value)
   };
   const saveCourseDetails = async () => {
     const body = {
@@ -69,7 +79,9 @@ export default function TextEditor({ placeholder }) {
                         {courseList.map((data) => (
                           <option value={data?.id} key={data?.id}>
                             {data?.title}
+                            
                           </option>
+                          
                         ))}
                       </select>
                     </div>
@@ -82,7 +94,7 @@ export default function TextEditor({ placeholder }) {
                         onChange={(newContent) => {}}
                       />
                     </div>
-                    {content}
+                    <div dangerouslySetInnerHTML={{__html:content }} />
                     <div>
                       <div class="input-group">
                         <button

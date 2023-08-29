@@ -25,12 +25,17 @@ const updateStudent=async(data)=>{
 }
 const getCourseList=async()=>{
    const course=await axios.get(`${BASE_URL}/get-course-list`)
+   console.log('Course-api',course)
    return course?.data?.data  
 }
 const courseDetails=async(data)=>{
     const courseDetails=await axios.post(`${BASE_URL}/create-course-details`,data)   
     return courseDetails?.data
 }
+const getCourseListDetailsBody=async(course_id)=>{
+  const courseDetailsBody=await axios.get(`${BASE_URL}/get-course-details-body?course_master_id=${course_id}`)
+  return courseDetailsBody.data
+}
  
-const AuthUserAccess = { Login,getStudentInfo,getCourseList,courseDetails,updateStudent };
+const AuthUserAccess = { Login,getStudentInfo,getCourseList,courseDetails,updateStudent,getCourseListDetailsBody };
 export default AuthUserAccess;
