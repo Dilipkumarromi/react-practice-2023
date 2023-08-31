@@ -80,10 +80,11 @@ export default function TextEditor({ placeholder }) {
                           <option value={data?.id} key={data?.id}>
                             {data?.title}                            
                           </option>
-                          
+                         
                         ))}
                       </select>
                     </div>
+                   
                     <div class="bubble-editor">
                       <JoditEditor
                         ref={editor}
