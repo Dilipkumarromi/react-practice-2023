@@ -4,7 +4,7 @@ const messagesSwal=(messageType)=>{
         case 'success':
             return Swal.fire("Course Details has been created", "", "success");
             
-        case 'Duplicate':
+        case 'duplicate':
             return Swal.fire("Duplicate entries are not allowed!", "", "question");            
             
         default:

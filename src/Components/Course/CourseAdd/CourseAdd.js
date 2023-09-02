@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ApiServices from '../../../util/ApiServices'
+import Swal from '../../../util/Swal'
 import {
   Field,
   Form,
@@ -14,18 +16,23 @@ export default function CourseAdd() {
     setActiveCourse(e.target.value);
   };
 
+  const createCourse=async(data)=>{
+    const create=await ApiServices.createCourse(data)
+    console.log('create course',create)
+  }
   const formik = useFormik({
     initialValues: {
       title: "",
       sub_title: "",
       duration: "",
       fee: "",
-      files: "",
+      file: "",
       is_active: activeCourse,
     },
 
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log("onSubmit", values);
+     await createCourse(values)
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -35,7 +42,7 @@ export default function CourseAdd() {
         <div className="page-content">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-xxl-6">
+              <div className="col-xxl-12">
                 <div className="card">
                   <div className="card-header align-items-center d-flex cards_heading_color">
                     <h4
@@ -133,7 +140,7 @@ export default function CourseAdd() {
                                 </label>
                                 <Field
                                   type="file"
-                                  name="files"
+                                  name="file"
                                   className="form-control"
                                   accept="image/jpeg"
                                 />

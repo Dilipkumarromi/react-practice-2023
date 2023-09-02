@@ -13,7 +13,8 @@ import EnrollCourse from "../Components/Student/EnrollCourse/EnrollCourse";
 import UserProfile from "../Components/Student/UserProfile/UserProfile";
 import StudentFormsDetails from "../Components/Student/StudentFormsDetails/StudentFormsDetails";
 import Blogs from "../Components/Blogs/Blogs";
-import CourseAdd from "../Components/CourseAdd/CourseAdd";
+import CourseAdd from "../Components/Course/CourseAdd/CourseAdd";
+
 
 export default function Router() {
   return (
