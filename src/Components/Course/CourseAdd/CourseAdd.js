@@ -18,7 +18,15 @@ export default function CourseAdd() {
 
   const createCourse=async(data)=>{
     const create=await ApiServices.createCourse(data)
-    console.log('create course',create)
+    console.log('create course-0001',create.status)
+    if(create.status=='409')
+    {
+      Swal('duplicate')
+
+    }
+    else{
+      Swal('success')
+    }
   }
   const formik = useFormik({
     initialValues: {
@@ -31,9 +39,10 @@ export default function CourseAdd() {
     },
 
     onSubmit: async (values) => {
-      console.log("onSubmit", values);
-     await createCourse(values)
-      alert(JSON.stringify(values, null, 2));
+       
+    const res=await createCourse(values)
+      
+       
     },
   });
   return (

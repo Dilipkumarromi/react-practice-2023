@@ -14,6 +14,7 @@ import UserProfile from "../Components/Student/UserProfile/UserProfile";
 import StudentFormsDetails from "../Components/Student/StudentFormsDetails/StudentFormsDetails";
 import Blogs from "../Components/Blogs/Blogs";
 import CourseAdd from "../Components/Course/CourseAdd/CourseAdd";
+import CourseList from "../Components/Course/CourseList/CourseList";
 
 
 export default function Router() {
@@ -27,6 +28,7 @@ export default function Router() {
           <Route path="/texteditor" element={<TextEditor />} />
           <Route path="/videoplayer" element={<VideoPlay />} />
           <Route path="/studentlist" element={<StudentList />} />
+          <Route path="/courselist" element={<CourseList />} />
 
           <Route path="/student-forms" element={<StudentFormsDetails />} />
           <Route path="/certificate" element={<DegreeList />} />

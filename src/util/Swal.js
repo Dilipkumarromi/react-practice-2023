@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
-const messagesSwal=(messageType)=>{
+const messagesSwal=(messageType,userResponseMessage='')=>{
     switch (messageType) {
         case 'success':
-            return Swal.fire("Course Details has been created", "", "success");
+            return Swal.fire(`${userResponseMessage} has been created`, "", "success");
             
         case 'duplicate':
             return Swal.fire("Duplicate entries are not allowed!", "", "question");            
